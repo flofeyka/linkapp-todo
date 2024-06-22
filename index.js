@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5050;
 
 app.use(express.json());
 app.use(cookieParser())
-app.use(cors({ origin: true }))
+app.use(cors({ credentials: true, origin: true }))
 app.use("/api/auth", authRouter);
 app.use("/api/task", taskRouter);
 app.use(errorMiddleware);
